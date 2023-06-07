@@ -27,7 +27,7 @@ struct AdaptiveStack<Content: View>: View {
 
 	var body: some View {
 		Group {
-			if UIDevice.iPhoneType == .withOutNotch {
+            if UIDevice().isSmallDevice() {
 				VStack(alignment: horizontalAlignment, spacing: spacing, content: content)
 			} else {
 				HStack(alignment: verticalAlignment, spacing: spacing, content: content)

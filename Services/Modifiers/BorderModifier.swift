@@ -11,7 +11,7 @@ import SwiftUI
 fileprivate struct BorderModifer: ViewModifier {
 	
 	var cornerRadius: CGFloat = 7
-	var borderColor: Color = UIColor.veryLightPink().swiftUIColor
+	var borderColor: Color = UIColor.gray.swiftUIColor
 	var lineWidth: CGFloat = 1
 	
 	func body(content: Content) -> some View {
@@ -25,7 +25,7 @@ fileprivate struct BorderModifer: ViewModifier {
 
 extension View {
 	
-	func addBorder(cornerRadius: CGFloat = 7, borderColor: Color = UIColor.veryLightPink().swiftUIColor, lineWidth: CGFloat = 1) -> some View {
+	func addBorder(cornerRadius: CGFloat = 7, borderColor: Color = UIColor.gray.swiftUIColor, lineWidth: CGFloat = 1) -> some View {
 	
 		self.modifier(BorderModifer(cornerRadius: cornerRadius, borderColor: borderColor, lineWidth: lineWidth))
 	}
